@@ -1,13 +1,13 @@
 " LaTeX filetype plugin
 " Language:     LaTeX (ft=tex)
 " Maintainer:   Benji Fisher, Ph.D. <benji@member.AMS.org>
-" Version:	1.1
-" Last Change: Tue Dec 30 04:00 PM 2003 EST
+" Version:	1.1.1
+" Last Change: Tue Dec 30 06:00 PM 2003 EST
 "  URL:		http://www.vim.org/script.php?script_id=411
 
 " Only do this when not done yet for this buffer
 if exists("b:did_ftplugin")
-  " finish
+  finish
 endif
 
 " Don't load another plugin for this buffer
