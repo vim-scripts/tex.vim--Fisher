@@ -1,12 +1,13 @@
 " LaTeX filetype plugin
 " Language:     LaTeX (ft=tex)
 " Maintainer:   Benji Fisher, Ph.D. <benji@member.AMS.org>
-" Version:	1.0
-" Last Change:  2002 April 4
+" Version:	1.1
+" Last Change: Tue Dec 30 04:00 PM 2003 EST
+"  URL:		http://www.vim.org/script.php?script_id=411
 
 " Only do this when not done yet for this buffer
 if exists("b:did_ftplugin")
-  finish
+  " finish
 endif
 
 " Don't load another plugin for this buffer
@@ -16,7 +17,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 " This may be used to set b:tex_flavor.  A more complete version can be found
-" in foo.vim (see VimOnline).
+" in foo.vim (see http://www.vim.org/script.php?script_id=72).
 if !exists("*s:GetModelines")
   fun! s:GetModelines(pat, ...)
     " Long but simple:  set start line and finish line.
@@ -77,10 +78,10 @@ setlocal cms=%%s
 " Allow "[d" to be used to find a macro definition:
 " Recognize plain TeX \def as well as LaTeX \newcommand and \renewcommand .
 " I may as well add the AMS-LaTeX DeclareMathOperator as well.
-let &l:define='\([egx]\|char\|mathchar\|count\|dimen\|muskip\|skip\|toks\)\='
-	\ . 	'\\def\|\\font\|\(future\)\=let'
-	\ . '\new\(count\|dimen\|skip\|muskip\|box\|toks\|read\|write'
-	\ . 	'\|fam\|insert\)'
+let &l:define='\\\([egx]\|char\|mathchar\|count\|dimen\|muskip\|skip\|toks\)\='
+	\ .	'def\|\\font\|\\\(future\)\=let'
+	\ . '\|\\new\(count\|dimen\|skip\|muskip\|box\|toks\|read\|write'
+	\ .	'\|fam\|insert\)'
 	\ . '\|\\\(re\)\=new\(boolean\|command\|counter\|environment\|font'
 	\ . '\|if\|length\|savebox\|theorem\(style\)\=\)\s*\*\=\s*{\='
 	\ . '\|DeclareMathOperator\s*{\=\s*'
