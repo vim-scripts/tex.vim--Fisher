@@ -1,0 +1,10 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=411
+
+     This is an updated version of the file ftplugin/tex.vim included in the
+standard vim distribution.  It sets options appropriately for editing TeX
+(especially LaTeX) files.  It is fairly conservative:  it may not do everything
+you want, but it will probably not do anything to annoy you.
+
+     This will set the buffer-local variable b:tex_flavor to "tex" (for plain TeX)
+ or "latex".  Other mappings, plugins, etc. may use this variable to modify
+their behavior.
